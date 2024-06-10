@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prova 2 - Consumo de APIs</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="app" class="joke-container">
+    <h1>Gerador de Piadas 😂</h1>
+    <p class="joke-text">{{ joke }}</p>
+    <button class="joke-button" @click="getJoke" :disabled="loading">Gerar</button>
+    <div v-if="loading" class="loading">Carregando...</div>
+    <div v-if="error" class="error">{{ error }}</div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
